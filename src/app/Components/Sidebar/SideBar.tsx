@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import "./sidebar.scss"
 import { Tooltip } from "@nextui-org/react";
+import Link from 'next/link';
 
 
 type sidebaroptions = {
@@ -16,12 +17,12 @@ const SideBar = () => {
         {
             toltipcontent: "myself",
             icon: "fa-solid fa-house",
-            redirecthref: "",
+            redirecthref: "#myself",
         }
         , {
             toltipcontent: "About Me",
             icon: "fa-solid fa-user",
-            redirecthref: "",
+            redirecthref: "#about",
         }
         , {
             toltipcontent: "What i Offer",
@@ -38,16 +39,18 @@ const SideBar = () => {
         }
     ]
     return (
-        <div className='absolute py-1 z-50 flex flex-col justify-center align-center gap-2 w-16 h-auto top-12 left-11 sidebar'>
+        <div className='fixed py-1 z-50 flex flex-col justify-center align-center gap-2 w-16 h-auto top-12 left-11 sidebar'>
             {
                 sidebarobject?.map((elem: sidebaroptions) => (
                     <Tooltip key={elem.icon} content={elem.toltipcontent} placement="right">
-                        <div onClick={() => setSelectedIcon(elem.toltipcontent)} className={`${SelectedIcon === elem.toltipcontent && "selectedicon"} cursor-pointer sidebaricons h-12 w-12   flex flex-col justify-center align-center`}>
-                            <i className={`${elem.icon} `}></i>
-                            {SelectedIcon === elem.toltipcontent && (
-                                <div className='mb-0  selecteddot mt-1'></div>
-                            )}
-                        </div>
+                        <Link href={elem.redirecthref}>
+                            <div onClick={() => setSelectedIcon(elem.toltipcontent)} className={`${SelectedIcon === elem.toltipcontent && "selectedicon"} cursor-pointer sidebaricons h-12 w-12   flex flex-col justify-center align-center`}>
+                                <i className={`${elem.icon} `}></i>
+                                {SelectedIcon === elem.toltipcontent && (
+                                    <div className='mb-0  selecteddot mt-1'></div>
+                                )}
+                            </div>
+                        </Link>
                     </Tooltip>
                 ))
             }

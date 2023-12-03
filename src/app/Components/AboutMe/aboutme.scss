@@ -1,0 +1,10 @@
+.links{
+    border: 1px solid transparent;
+        transition: all ease 0.2s;
+}
+.gridexpcontent{
+    grid-row-gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+}

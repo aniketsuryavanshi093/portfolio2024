@@ -16,9 +16,11 @@
     "react-dom": "^18",
     "react-particle-image": "^1.0.2",
     "react-particles": "^2.12.2",
+    "react-tilt": "^1.0.2",
     "sass": "^1.69.5",
     "tsparticles": "^2.12.0",
-    "tsparticles-slim": "^2.12.0"
+    "tsparticles-slim": "^2.12.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",
