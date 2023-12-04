@@ -35,7 +35,7 @@ const SideBar = () => {
         }, {
             toltipcontent: "Contact me",
             icon: "fa-solid fa-address-book",
-            redirecthref: "",
+            redirecthref: "#contact",
         }
     ]
     return (

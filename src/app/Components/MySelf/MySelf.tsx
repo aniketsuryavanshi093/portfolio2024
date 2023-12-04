@@ -47,19 +47,19 @@ const MySelf = () => {
                 </p>
             </motion.div>
             <motion.div variants={fadeIn("right", "spring", .5 * 1, 1.5)} className="_container flex justify-center align-center w-2/5 relative">
-                <motion.div variants={fadeIn("right", "spring", .5 * 2, 1.7)} className=' left-[-7%] absolute'>
+                <motion.div variants={fadeIn("right", "spring", .5 * 2, 1.7)} className=' 2xl:left-[-7%] xl:left-[-15%] absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/js.png"} />
                 </motion.div>
-                <motion.div variants={fadeIn("right", "spring", .5 * 3, 1)} className=' top-[-27%] left-[4%] absolute'>
+                <motion.div variants={fadeIn("right", "spring", .5 * 3, 1)} className=' 2xl:top-[-27%] 2xl:left-[4%] xl:top-[-35%] xl:left-[0%] absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/mongo.png"} />
                 </motion.div>
-                <motion.div variants={fadeIn("right", "spring", .5 * 4, 1.2)} className=' right-[3%] top-[55%] absolute'>
+                <motion.div variants={fadeIn("right", "spring", .5 * 4, 1.2)} className=' 2xl:right-[3%] 2xl:top-[55%] xl:right-[4%] xl:top-[72%] absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/react.png"} />
                 </motion.div>
-                <motion.div variants={fadeIn("right", "spring", .5 * 5, 1.4)} className=' top-[0px] right-0 absolute'>
+                <motion.div variants={fadeIn("right", "spring", .5 * 5, 1.4)} className=' 2xl:top-[0px] 2xl:right-0  xl:top-[-28%] xl:right-0 absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/nextjs.svg"} />
                 </motion.div>
-                <motion.div variants={fadeIn("right", "spring", .5 * 6, 1.6)} className=' bottom-[-31%] left-[8%]  absolute'>
+                <motion.div variants={fadeIn("right", "spring", .5 * 6, 1.6)} className=' 2xl:bottom-[-31%] 2xl:left-[8%] xl:bottom-[-32%] xl:left-[-2%]  absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/ts.png"} />
                 </motion.div>
                 <Image width={100} height={100} unoptimized className="profile-pic shape" src="/images/myprofile.jpg" alt="Profile Picture" />
@@ -69,4 +69,4 @@ const MySelf = () => {
 }
 
 
-export default SectionWrapper(MySelf, "myself", ' flex justify-between w-[90%] py-5 md:mt-[150px] px-4')
+export default SectionWrapper(MySelf, "myself", ' flex justify-between xl:w-[95%] 2xl:w-[90%] py-5 md:mt-[100px] xl:mt-[80px] 2xl:mt-[150px]  px-4')

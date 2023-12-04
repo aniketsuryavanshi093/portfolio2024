@@ -18,6 +18,20 @@ export const services = [
     },
 ];
 
+export const contacts = [{
+    icon: "fa-regular fa-envelope",
+    label: "Email",
+    content: "aniketsuryavanshi093@gmail.com",
+}, {
+    icon: "fa-brands fa-linkedin-in",
+    label: "Linked In",
+    content: "aniketsuryavanshi093",
+}, {
+    icon: "fa-solid fa-phone",
+    label: "Contact Me",
+    content: "+91 8856869564",
+}]
+
 export const experiences = [
     {
         title: "Frontend Development",

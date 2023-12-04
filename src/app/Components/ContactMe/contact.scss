@@ -1,0 +1,43 @@
+.contactbg {
+  background-color: black;
+  border: 2px solid #fff;
+  border-radius: 15px 10px 0px 10px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.contactbtn {
+  position: relative;
+  box-shadow: 10px 5px 5px #fb923c;
+  height: 50px;
+  margin-top: 30px;
+  background: white;
+  color: black;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.contactbtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(
+    251,
+    146,
+    60,
+    0.5
+  ); /* Adjust the color and opacity as needed */
+  opacity: 0;
+  transition: width 0.4s ease, height 0.35s ease, opacity 0.4s ease;
+}
+
+.contactbtn:hover::after {
+  width: 100%; /* Adjust the size of the ripple */
+  height: 400px; /* Adjust the size of the ripple */
+  opacity: 1;
+}
