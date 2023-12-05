@@ -4,11 +4,29 @@ import SectionWrapper from '@/app/hoc/StaggerContainer'
 import React from 'react'
 import { motion } from 'framer-motion'
 import "./contact.scss"
-import Image from 'next/image'
-import { Input } from '@nextui-org/react'
+import { Input, Textarea } from '@nextui-org/react'
 import { Tilt } from 'react-tilt'
+import axios from 'axios'
 
 const Contact = () => {
+    const handleSubmit = async (event: any) => {
+        event.preventDefault();
+        const data = {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            message: event.target.message.value,
+        };
+        try {
+            const response = await axios.post("/api/contact", data);
+            if (response.status === 200) {
+                console.log("Form submitted");
+            } else {
+                console.log("Failed");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
     return (
         <div className='w-full'>
             <div className='flex justify-center mb-8'>
@@ -34,14 +52,21 @@ const Contact = () => {
                             <p className='w-full text-center text-2xl  text-orange-400'>Contact Me</p>
                             <i className="fa-solid fa-star text-2xl text-orange-400"></i>
                         </div>
-                        <div className='flex flex-col'>
-                            <Input type="text" variant={'underlined'} label="Name" />
-                            <Input type="email" variant={'underlined'} label="Email" />
-                            <Input type="text" variant={'underlined'} label="Phone Number" />
-                            <button className='w-full contactbtn'>
+                        <form onSubmit={handleSubmit} className='flex flex-col'>
+                            <Input type="text" name='name' variant={'underlined'} label="Name"
+                                isRequired
+                                autoComplete="off" />
+                            <Input type="email" name='email' variant={'underlined'} label="Email"
+                                required isRequired
+                                autoComplete="off"
+                            />
+                            <Textarea rows={4}
+                                autoComplete="off" isRequired type="text" name='message' variant={'underlined'} label="Message"
+                            />
+                            <button type="submit" className='w-full contactbtn'>
                                 Get In Touch
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

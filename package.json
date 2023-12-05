@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "axios": "^1.6.2",
     "framer-motion": "^10.16.12",
+    "google-auth-library": "^9.4.1",
+    "google-spreadsheet": "^3.3.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",

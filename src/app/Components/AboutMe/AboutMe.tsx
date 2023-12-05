@@ -22,10 +22,10 @@ const AboutMe = () => {
                     <ServiceCard key={service.title} index={index} {...service} />
                 ))}
             </div>
-            <div className='flex mt-11   gap-10'>
+            <div className='flex mt-11 gap-10'>
                 {
                     experiences.map((elem,) => (
-                        <div key={elem.title} className={`w-full border rounded-xl  border-mainpara z-[99999] flex flex-col  align-center p-6`}>
+                        <div key={elem.title} className={`w-full border rounded-xl  border-mainpara z-[99999] flex flex-col  align-center py-6 pb-8 px-6`}>
                             <p className='text-2xl pb-7 text-white'>
                                 {elem.title}
                             </p>
