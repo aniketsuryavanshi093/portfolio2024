@@ -7,6 +7,8 @@ import "./contact.scss"
 import { Input, Textarea } from '@nextui-org/react'
 import { Tilt } from 'react-tilt'
 import axios from 'axios'
+import Image from 'next/image'
+import { ParticleImg } from '../Particleimage'
 
 const Contact = () => {
     const handleSubmit = async (event: any) => {
@@ -30,7 +32,7 @@ const Contact = () => {
     };
     return (
         <div className='w-full'>
-            <div className='flex justify-center mb-8'>
+            <div className='flex justify-center mb-14'>
                 <motion.p className='text-2xl '> Get in touch </motion.p>
             </div>
             <div className='md:flex md:flex-row flex flex-column justify-center'>
@@ -47,8 +49,17 @@ const Contact = () => {
                         }
                     </div>
                 </div>
-                <div className='flex-[2] w-full flex justify-end'>
-                    <div className='w-[60%]  p-5 contactbg'>
+                <div className='flex-[2] w-full flex-col flex justify-center align-end'>
+                    <div className=' w-[60%] flex justify-center align-center profile-container'>
+                        <div className="ring ring2">
+                            <ParticleImg particles={5000} scale={1} className='rounded-[50%]' mass={50} width={300} height={300} color="transparent" src={"/images/bluebg.png"} />
+                        </div>
+                        <div className="ring ring3">
+                            <ParticleImg particles={5000} scale={1.5} className='rounded-[50%]' mass={20} width={400} height={400} color="transparent" src={"/images/white.png"} />
+                        </div>
+                        <Image className="profile-image" width={150} height={150} src="/images/myprofile.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className='w-[60%]  p-5 contactbg z-10'>
                         <div className='flex justify-center'>
                             <p className='w-full text-center text-2xl  text-orange-400'>Contact Me</p>
                             <i className="fa-solid fa-star text-2xl text-orange-400"></i>

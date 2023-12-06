@@ -41,7 +41,6 @@
     rgba(60, 51, 80, 0) 100%
   );
 }
-
 .green-pink-gradient {
   background: "#00cea8";
   background: linear-gradient(184deg, #404040 1.9%, #00000085 97.5%);
@@ -129,6 +128,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--backgroundglobal);
+  scroll-behavior: smooth;
 }
 
 .align-center {

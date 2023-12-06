@@ -6,7 +6,7 @@ import React from 'react'
 import "./myself.scss"
 import { ParticleImg } from '../Particleimage'
 import SectionWrapper from '@/app/hoc/StaggerContainer'
-import { fadeIn, textVariant } from '@/app/utils'
+import { fadeIn, textVariant, zoomIn } from '@/app/utils'
 import Typewriter from 'typewriter-effect';
 
 const MySelf = () => {
@@ -46,7 +46,7 @@ const MySelf = () => {
                     real-world problems. Let's work together to bring your ideas to life!
                 </p>
             </motion.div>
-            <motion.div variants={fadeIn("right", "spring", .5 * 1, 1.5)} className="_container flex justify-center align-center w-2/5 relative">
+            <motion.div variants={zoomIn(.5 * 1, 1.5)} className="_container flex justify-center align-center w-2/5 relative">
                 <motion.div variants={fadeIn("right", "spring", .5 * 2, 1.7)} className=' 2xl:left-[-7%] xl:left-[-15%] absolute'>
                     <ParticleImg color="transparent" src={"/images/icons/js.png"} />
                 </motion.div>
