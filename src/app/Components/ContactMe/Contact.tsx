@@ -12,9 +12,10 @@ const Contact = () => {
     const handleSubmit = async (event: any) => {
         event.preventDefault();
         const data = {
-            name: event.target.name.value,
-            email: event.target.email.value,
-            message: event.target.message.value,
+            Name: event.target.name.value,
+            Email: event.target.email.value,
+            Message: event.target.message.value,
+            Date: new Date().toString()
         };
         try {
             const response = await axios.post("/api/contact", data);
