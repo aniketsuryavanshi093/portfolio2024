@@ -41,3 +41,45 @@
   height: 400px; /* Adjust the size of the ripple */
   opacity: 1;
 }
+
+// rings
+
+.profile-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 20;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #3498db; /* Adjust the color as needed */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.ring1 {
+  /* Add more rings with similar classes for additional rings */
+  width: 160px; /* Adjust the size as needed */
+  height: 160px;
+}
+
+.ring2 {
+  width: 300px;
+  height: 300px;
+  background-color: #15161a;
+  z-index: 10;
+}
+
+.ring3 {
+  width: 400px;
+  height: 400px;
+}
