@@ -10,28 +10,28 @@ const MyProjects = () => {
     return (
         <div className="w-full">
             <motion.p variants={zoomIn(0.6, .75)} className='text-2xl  text-center w-full'>Projects</motion.p>
-            <div className='flex justify-start gap-4 mt-9 align-center'>
-                <div className='projectcard rounded-[30px] p-1 flex-1'>
-                    <Image src="/images/project1.png" className='rounded-[30px]' unoptimized width={100} height={250} alt='project1' />
-                    <div className='w-[80%] m-auto flex justify-start my-3 gap-4 align-center'>
+            <div className='flex lg:flex-row flex-col xl:justify-start justify-between  gap-4 mt-9 align-center'>
+                <div className='projectcard lg:rounded-[30px] rounded-[10px] p-1 flex-1'>
+                    <Image src="/images/project1.png" className='lg:rounded-[30px] rounded-[10px]' unoptimized width={100} height={250} alt='project1' />
+                    <div className='lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center'>
                         <Image alt='scale' unoptimized width={30} height={30} className='w-[30px] scaleimage' src={"/images/scale.png"} />
                         <div className='flex flex-col align-start justify-center'>
                             <p className=' 
-                            text-lg'> Design</p>
+                            lg:text-lg text-sm'> TaskSphere (twilio) </p>
                             <p className=' 
-                            text-base text-mainpara'>My Design Projects</p>
+                          lg:text-base  xl:text-lg text-sm text-mainpara'>My Design Projects</p>
                         </div>
                     </div>
                 </div>
-                <div className='projectcard rounded-[30px] p-1 flex-1'>
-                    <Image src="/images/project2.png" className='rounded-[30px]' unoptimized width={100} height={250} alt='project1' />
-                    <div className='w-[80%] m-auto flex justify-start my-3 gap-4 align-center'>
+                <div className='projectcard lg:rounded-[30px] rounded-[10px] p-1 flex-1'>
+                    <Image src="/images/project2.png" className='lg:rounded-[30px] rounded-[10px]' unoptimized width={100} height={250} alt='project1' />
+                    <div className='lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center'>
                         <Image alt='scale' unoptimized width={30} height={30} className='w-[30px] scaleimage' src={"/images/scale.png"} />
                         <div className='flex flex-col align-start justify-center'>
                             <p className=' 
-                            text-lg'> Design</p>
+                           lg:text-lg text-sm'>  FreelanceWeb (Upwork)</p>
                             <p className=' 
-                            text-base text-mainpara'>My Design Projects</p>
+                             lg:text-base  xl:text-lg text-sm text-mainpara'>My Design Projects</p>
                         </div>
                     </div>
                 </div>
@@ -40,4 +40,4 @@ const MyProjects = () => {
     )
 }
 
-export default SectionWrapper(MyProjects, "projects", 'flex justify-between w-[90%] py-5 flex-col md:mt-[150px] px-4')
+export default SectionWrapper(MyProjects, "projects", 'flex justify-between lg:w-[90%] w-full py-5 flex-col md:mt-[100px] px-4')

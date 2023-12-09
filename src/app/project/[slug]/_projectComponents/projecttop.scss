@@ -8,8 +8,6 @@
         ;
         margin: auto;
     }
-        border-radius: 40px;
-        width: 80%;
         margin: auto;
         background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
     
@@ -30,9 +28,8 @@
     box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.60), 0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
 }
 .mobileimagedivoverlap{
-    width: 302px;
-        height: 566px;
-    border-radius: 24px;
+   
+    border-radius: 20px;
         background: var(--white-white-10, rgba(255, 255, 255, 0.10));
 }
 .section3para{
@@ -57,4 +54,17 @@
             width: 100%;
             border-radius: 40px;
 background: var(--white-white-10, rgba(255, 255, 255, 0.10));
+}
+
+.imagemobile{
+    border-radius: 12px;
+    height: 150px ;
+    width: 250px;
+        background: var(--white-white-10, rgba(255, 255, 255, 0.10));
+}
+.rotated-div{
+        transform: rotate(49deg);
+}
+.showfinalimage{
+    background: var(--white-white-10, rgba(255, 255, 255, 0.10));
 }

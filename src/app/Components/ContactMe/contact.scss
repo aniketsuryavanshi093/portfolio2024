@@ -9,7 +9,6 @@
 .contactbtn {
   position: relative;
   box-shadow: 10px 5px 5px #fb923c;
-  height: 50px;
   margin-top: 30px;
   background: white;
   color: black;
@@ -49,8 +48,6 @@
 }
 
 .profile-image {
-  width: 150px; /* Adjust the size as needed */
-  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   z-index: 20;
@@ -73,8 +70,7 @@
 }
 
 .ring2 {
-  width: 300px;
-  height: 300px;
+ 
   background-color: #15161a;
   z-index: 10;
 }
