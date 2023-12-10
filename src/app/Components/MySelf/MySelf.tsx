@@ -16,7 +16,7 @@ const MySelf = () => {
 
     return (
         <>
-            <motion.div variants={textVariant()} className='flex flex-col gap-3 lg:gap-6 lg:w-2/5 w-full align-start  z-[9]  justify-start'>
+            <motion.div variants={textVariant()} className='flex flex-col gap-3 lg:gap-6 lg:w-2/5 w-full lg:items-start items-center  z-[9]  justify-start'>
                 <p className='lg:text-2xl xl:text-2xl text-lg flex text-white whitespace-nowrap'> Hi i'm &nbsp; <Typewriter
                     onInit={(typewriter) => {
                         typewriter.typeString('Aniket Suryavanshi')

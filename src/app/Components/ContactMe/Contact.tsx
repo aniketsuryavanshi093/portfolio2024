@@ -10,11 +10,10 @@ import axios from 'axios'
 import Image from 'next/image'
 import { ParticleImg } from '../Particleimage'
 import { useIsBreakpointActive } from '@/app/hooks/useTailwindBreakpoint'
+import { fadeIn, slideIn, zoomIn } from '@/app/utils'
 
 const Contact = () => {
     const isLarge = useIsBreakpointActive()
-    console.log(isLarge,);
-
     const handleSubmit = async (event: any) => {
         event.preventDefault();
         const data = {
@@ -64,8 +63,8 @@ const Contact = () => {
             <div className='flex justify-center mb-14'>
                 <motion.p className='text-2xl '> Get in touch </motion.p>
             </div>
-            <div className='md:flex md:flex-row flex flex-col  justify-center'>
-                <div className='flex-1'>
+            <motion.div variants={zoomIn(0, 1)} className='md:flex md:flex-row flex flex-col  justify-center'>
+                <motion.div variants={slideIn("left", "spring", 0, 1)} className='flex-1'>
                     <div className='w-full flex gap-6 flex-col  items-center  lg:items-end '>
                         {
                             contacts.map((elem) => (
@@ -77,8 +76,8 @@ const Contact = () => {
                             ))
                         }
                     </div>
-                </div>
-                <div className='flex-[2] w-full sm:mt-0  mt-24 flex-col flex justify-center  items-center  lg:items-end'>
+                </motion.div>
+                <motion.div variants={slideIn("right", "spring", 0, 1)} className='flex-[2] w-full sm:mt-0  mt-24 flex-col flex justify-center  items-center  lg:items-end'>
                     <div className=' xl:w-[60%] lg:w-[50%] w-full flex justify-center align-center profile-container'>
                         <div className="ring ring2 xl:w-[300px] xl:h-[300px] lg:w-[200px] lg:h-[200px] w-[190px] h-[190px] ">
                             <ParticleImg particles={5000} scale={1} className='rounded-[50%]' mass={50} width={getWidthHeight('ring2')} height={getWidthHeight('ring2')} color="transparent" src={"/images/bluebg.png"} />
@@ -109,9 +108,9 @@ const Contact = () => {
                             </button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
+                </motion.div>
+            </motion.div>
+        </div >
     )
 }
 

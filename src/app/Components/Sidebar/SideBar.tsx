@@ -13,7 +13,6 @@ type sidebaroptions = {
 
 const SideBar = () => {
     const [SelectedIcon, setSelectedIcon] = useState("myself")
-    const [Scrolled, setScrolled] = useState(false)
     const sidebarobject: sidebaroptions[] = [
         {
             toltipcontent: "myself",
@@ -39,16 +38,6 @@ const SideBar = () => {
             redirecthref: "#contact",
         }
     ]
-    const handleScroll = useCallback((e: any,) => {
-        if (window.scrollY > 50) {
-            setScrolled(true)
-        } else {
-            setScrolled(false)
-        }
-    }, [])
-    useEffect(() => {
-        return () => window.addEventListener("scroll", handleScroll)
-    }, [])
     return (
         <div className='fixed py-1 z-[999999] flex flex-row lg:flex-col  justify-center align-center gap-2 w-auto lg:w-16 h-auto lg:top-12 top-[1%] left-[12%]   lg:left-11 sidebar'>
             {
