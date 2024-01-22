@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import SectionWrapper from "@/app/hoc/StaggerContainer";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { zoomIn } from "@/app/utils";
 import "./mymproject.scss";
@@ -9,6 +9,47 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MyProjects = () => {
+  function loadImageWithRetry(imageElement, src, maxRetries, delay) {
+    let retries = 0;
+
+    function load() {
+      imageElement.src = src;
+    }
+
+    function retry() {
+      retries++;
+      if (retries < maxRetries) {
+        setTimeout(load, delay);
+      }
+    }
+
+    imageElement.addEventListener("load", () => {
+      retry();
+      console.log("Image loaded successfully");
+    });
+
+    imageElement.addEventListener("error", () => {
+      console.error("Error loading image");
+      retry();
+    });
+
+    load();
+  }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const imageElementstats = document.querySelector("#github-stats");
+      const imageUrlstats =
+        "https://github-readme-stats.vercel.app/api?username=aniketsuryavanshi093&show_icons=true&locale=en&theme=dark";
+      const imageElementstreak = document.querySelector("#github-streak");
+      const imageUrlstreak =
+        "https://github-readme-streak-stats.herokuapp.com/?user=aniketsuryavanshi093&theme=dark";
+
+      loadImageWithRetry(imageElementstats, imageUrlstats, 2, 100);
+      loadImageWithRetry(imageElementstreak, imageUrlstreak, 2, 100);
+    }
+  }, []);
+
   return (
     <div className="w-full">
       <motion.p
@@ -93,15 +134,22 @@ const MyProjects = () => {
         </Link>
       </div>
       <div className="flex mt-14 lg:flex-row flex-col gap-4 flex-row justify-between items-center">
-        <div className="w-10/12 lg:w-1/2 flex flex-col items-center" >
-                <p className="text-lg">My Streak</p>
-                <img className="w-full h-32 lg:h-52 mt-3" src="https://github-readme-streak-stats.herokuapp.com/?user=aniketsuryavanshi093&theme=dark" alt="everly-gif" width="70%"></img>
+        <div className="w-10/12 lg:w-1/2 flex flex-col items-center">
+          <p className="text-lg">My Streak</p>
+          <img
+            className="w-full h-32 lg:h-52 mt-3"
+            alt="Aniket suryavanshi"
+            id="github-streak"
+            width="70%"
+          ></img>
         </div>
         <div className="w-10/12 lg:w-1/2  flex flex-col items-center">
-            <p className="text-lg">
-                My Git stats
-            </p>
-            <img className="w-full h-32 lg:h-52 mt-3" src="https://github-readme-stats.vercel.app/api?username=aniketsuryavanshi093&show_icons=true&locale=en&theme=dark" alt="everly-gif" ></img>
+          <p className="text-lg">My Git stats</p>
+          <img
+            className="w-full h-32 lg:h-52 mt-3"
+            id="github-stats"
+            alt="Aniket suryavanshi"
+          ></img>
         </div>
       </div>
     </div>
