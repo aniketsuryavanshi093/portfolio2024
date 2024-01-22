@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  staticPageGenerationTimeout: 100,
+  reactStrictMode: false,
   typescript: {
     ignoreBuildErrors: true,
   },
