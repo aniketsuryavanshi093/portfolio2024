@@ -5,11 +5,14 @@ import MySelf from "./Components/MySelf/MySelf";
 
 export default function Home() {
   return (
-    <>
+    <div
+      className="
+          pt-10 pb-10 lg:ml-36 "
+    >
       <MySelf />
       <AboutMe />
       <MyProjects />
       <Contact />
-    </>
-  )
+    </div>
+  );
 }
