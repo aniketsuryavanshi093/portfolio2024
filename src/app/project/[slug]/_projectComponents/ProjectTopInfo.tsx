@@ -25,22 +25,23 @@ const ProjectTopInfo = () => {
         </motion.div>
         <motion.div
           variants={zoomIn(0.5 * 1, 1.5)}
-          className="_container flex justify-center align-center lg:w-2/5 w-full relative"
+          className="_container flex justify-center align-center rounded-xl lg:w-2/5 w-full relative"
         >
           <Image
             width={400}
             height={400}
             unoptimized
-            className="project-pic "
-            src="/images/projects/tskpere1.png"
+            className="project-pic rounded-xl"
+            src={projectinfo?.projectintroimage}
             alt="Profile Picture"
           />
         </motion.div>
       </div>
-      <div className="w-full fullimage2 lg:rounded-[40px] lg:w-[80%] rounded-[12px]  p-1 lg:p-3">
+      <div className="w-full fullimage2 lg:rounded-[40px] lg:w-[80%] rounded-[12px]  p-1 lg:p-2">
         <Image
-          src="/images/projects/tskpere2.png"
+          src={projectinfo?.projectsection2image}
           width={100}
+          className="lg:rounded-[40px] rounded-[12px] "
           height={233}
           unoptimized
           alt={"project 2"}
