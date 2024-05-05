@@ -1,6 +1,7 @@
 "use client"
 import { projectdetail } from '@/app/Constant'
 import SectionWrapper from '@/app/hoc/StaggerContainer'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import React from 'react'
@@ -12,9 +13,11 @@ const ProjectSection2 = () => {
         <div className=' '>
             <div className='flex gap-5 lg:gap-0 justify-between flex-col lg:flex-row align-center w-[90%] m-auto '>
                 <div className='w-full lg:w-1/2 flex'>
-                    <div className='mobileimagedivoverlap w-[240px]  h-[366px] lg:w-[302px]  lg:h-[566px]'>
+                    <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px]  lg:h-[566px]'>
+                        <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile1}/>
                     </div>
-                    <div className='mobileimagedivoverlap w-[240px]  h-[366px] lg:w-[302px]  lg:h-[566px] div2'>
+                    <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px]  lg:h-[566px] div2'>
+                        <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile}/>
                     </div>
                 </div>
                 <div className='w-full lg:w-1/2'>
@@ -37,7 +40,7 @@ const ProjectSection2 = () => {
                         {projectinfo?.projectFeaturessection?.desc}
                     </p>
                 </div>
-                <div className='p-2 addsectionmainproblem lg:top-[60%] top-[70%] lg:h-[450px] xl:h-[500px] h-[300px] lg:rounded-[30px] rounded-[20px] absolute w-[95%] lg:w-4/5'>
+                <div className='p-2 addsectionmainproblem lg:top-[60%]  top-[70%] lg:h-[450px] xl:h-[500px] h-[300px] lg:rounded-[30px] rounded-[20px] absolute w-[95%] lg:w-4/5'>
                     <div className=' addsectionmainproblemimage lg:rounded-[30px] rounded-[20px] '></div>
                 </div>
             </div>
@@ -45,4 +48,4 @@ const ProjectSection2 = () => {
     )
 }
 
-export default SectionWrapper(ProjectSection2, "projectinfo2", " xl:w-[95%] 2xl:w-[93%] py-5 md:mt-[100px]  xl:mt-[100px]   px-4")
+export default SectionWrapper(ProjectSection2, "projectinfo2", " xl:w-[95%] 2xl:w-[93%] mx-auto py-5 md:mt-[100px]  xl:mt-[100px]   px-4")

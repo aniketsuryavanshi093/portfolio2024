@@ -58,11 +58,11 @@ const MyProjects = () => {
       >
         Projects
       </motion.p>
-      <div className="flex lg:flex-row flex-col xl:justify-start justify-between  gap-4 mt-9 align-center">
+      <div className="flex lg:flex-row flex-wrap flex-col xl:justify-evenly justify-evenly  gap-4 mt-9 align-center">
         <Link
           href={"project/tasksphere"}
           prefetch={false}
-          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 flex-1"
+          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
         >
           <Image
             src="/images/project1.png"
@@ -97,7 +97,7 @@ const MyProjects = () => {
         <Link
           href={"project/upwork"}
           prefetch={false}
-          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 flex-1"
+          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
         >
           <Image
             src="/images/project2.png"
@@ -132,7 +132,46 @@ const MyProjects = () => {
             </div>
           </div>
         </Link>
+        <Link
+          href={"project/schema"}
+          prefetch={false}
+          className="projectcard  m-auto lg:rounded-[30px] rounded-[10px] p-1 mt-8 w-5/12"
+        >
+          <Image
+            src="/images/projects/demoimage.png"
+            className="lg:rounded-[30px]  rounded-[10px]"
+            unoptimized
+            width={100}
+            height={250}
+            alt="project1"
+          />
+          <div className="lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center">
+            <Image
+              alt="scale"
+              unoptimized
+              width={30}
+              height={30}
+              className="w-[30px] scaleimage"
+              src={"/images/scale.png"}
+            />
+            <div className="flex flex-col align-start justify-center">
+              <p
+                className=" 
+                           lg:text-lg text-sm"
+              >
+                Schema Designer
+              </p>
+              <p
+                className=" 
+                             lg:text-base  xl:text-lg text-sm text-mainpara"
+              >
+                My Design Projects
+              </p>
+            </div>
+          </div>
+        </Link>
       </div>
+
       <div className="flex mt-14 lg:flex-row flex-col gap-4 flex-row justify-between items-center">
         <div className="w-10/12 lg:w-1/2 flex flex-col items-center">
           <p className="text-lg">My Streak</p>

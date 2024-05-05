@@ -3,6 +3,8 @@ export const projectdetail = {
     title: "TaskSphere",
     projectintroimage: "/images/projects/tskpere1.png",
     projectsection2image: "/images/projects/tskpere2.png",
+    projectsection2imageMobile: "/images/projects/schemamobile.png",
+    projectsection2imageMobile1: "/images/projects/schemamobile1.png",
     projectsection2info: {
       link: "",
       subtitle: "and some additional information",
@@ -32,6 +34,8 @@ export const projectdetail = {
   upwork: {
     title: "Upwork(clone)",
     projectintroimage: "/images/projects/tskpere1.png",
+    projectsection2imageMobile: "/images/projects/schemamobile.png",
+    projectsection2imageMobile1: "/images/projects/schemamobile1.png",
     projectsection2image: "/images/projects/tskpere2.png",
     projectsection2info: {
       link: "",
@@ -58,5 +62,37 @@ export const projectdetail = {
     },
     projectintrodesc:
       "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",
+  },
+  schema: {
+    title: "Schema Designer",
+    projectintroimage: "/images/projects/demoimage.png",
+    projectsection2image: "/images/projects/schematopsection.png",
+    projectsection2imageMobile1: "/images/projects/schemamobile1.png",
+    projectsection2imageMobile: "/images/projects/schemamobile.png",
+    projectsection2info: {
+      link: "https://schemadesigner.vercel.app/",
+      subtitle: "and some additional information",
+      desc: "Create a 🔥 diagram for your app database in less than 15 minutes. its a tools for visalizing the schema daigram for your next app!",
+    },
+    projectFeaturessection: {
+      desc: "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
+    },
+    projectfinalsection: {
+      sectiondesc:
+        "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
+      sectiontitle: "Important Feature",
+      sectionimage: "",
+    },
+    projectredbackgroundsection: {
+      sectiontitle: "Seamless Authentication",
+      sectiondesc:
+        "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
+    },
+    projectFooterinfo: {
+      takeaway:
+        "Write about what you’ve learned during this project, what are the main takeaways and what will you do differently in your next projects.",
+    },
+    projectintrodesc:
+      "Database design tool for creating schema diagrams, built for the modern development workflow.Schema Designer makes it easy for teams to collaborate on creating and maintaining schema diagrams. With a single source of truth, there's no need for manually syncing diagram files between different developers.",
   },
 };
