@@ -15,7 +15,8 @@ export const projectdetail = {
         "Write about what you’ve learned during this project, what are the main takeaways and what will you do differently in your next projects.",
     },
     projectFeaturessection: {
-      desc: "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
+      subtitle: "Daigrams and Folder management!😍",
+      desc: "Schema Designer contains a powerful diagramming tool that allows you to create and edit diagrams in real time. It also allows you to manage your diagrams in a folder structure. You can create folders to organize your diagrams and add daigrams to your folders. ",
     },
     projectredbackgroundsection: {
       sectiondesc:
@@ -75,13 +76,15 @@ export const projectdetail = {
       desc: "Create a 🔥 diagram for your app database in less than 15 minutes. its a tools for visalizing the schema daigram for your next app!",
     },
     projectFeaturessection: {
-      desc: "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
+      featureimg: "/images/projects/schema/projectbg1.png",
+      subtitle: "Daigrams and Folder management!😍",
+      desc: "Schema Designer contains a powerful diagramming tool that allows you to create and edit diagrams in real time. It also allows you to manage your diagrams in a folder structure. You can create folders to organize your diagrams and add daigrams to your folders. ",
     },
     projectfinalsection: {
       sectiondesc:
-        "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
-      sectiontitle: "Important Feature",
-      sectionimage: "",
+        "Schema Designer contains a powerful daigraming tool to design your satabase scheam also it helps in connect the tables with each other with many relationships. such as one to one, one to many, many to many.",
+      sectiontitle: "Schema Streamlined Workflow!💪",
+      sectionimage: "/images/projects/schema/projectbg2.png",
     },
     projectredbackgroundsection: {
       sectiontitle: "Seamless Authentication",
@@ -89,8 +92,10 @@ export const projectdetail = {
         "Explain an important feature of the project and show some image variations to showcase your versatile solution to a problem.",
     },
     projectFooterinfo: {
-      takeaway:
-        "Write about what you’ve learned during this project, what are the main takeaways and what will you do differently in your next projects.",
+      takeaway: `During the tenure of the project i have laerned a lot about the database and schema designing Backend structure which is developed using GO Lang.\n
+        I have also learnt the importance of writing well formatted and loosely coupled components in react which is a very important skill in the industry.\n
+        Also i have tried GO lang as my goto server language as i am curious of learning new speedy tech and also i have learnt a lot about the backend structure and how to create a good database schema.
+        `,
     },
     projectintrodesc:
       "Database design tool for creating schema diagrams, built for the modern development workflow.Schema Designer makes it easy for teams to collaborate on creating and maintaining schema diagrams. With a single source of truth, there's no need for manually syncing diagram files between different developers.",
