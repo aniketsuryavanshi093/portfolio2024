@@ -3,6 +3,7 @@ import React from "react";
 import { projectdetail } from "@/app/Constant";
 import SectionWrapper from "@/app/hoc/StaggerContainer";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 const ProjectFinalSection = () => {
   const { slug } = useParams();
@@ -17,7 +18,16 @@ const ProjectFinalSection = () => {
           {projectinfo?.projectfinalsection?.sectiondesc}
         </p>
       </div>
-      <div className="showfinalimage m-auto mt-7 rounded-xl lg:w-[80%] w-[90%] h-[330px] lg:h-[400px]"></div>
+      <div className="showfinalimage m-auto mt-7 rounded-xl lg:w-[70%] w-[90%] h-[330px] lg:h-[450px]">
+        <Image
+          width={200}
+          height={200}
+          alt="awdw"
+          className="rounded-xl w-full h-full"
+          unoptimized
+          src={projectinfo?.projectfinalsection?.sectionimage}
+        />
+      </div>
       <div
         className="w-full flex justify-center flex-col relative align-start lg:h-[80vh] h-[65vh]"
         style={{
@@ -28,7 +38,7 @@ const ProjectFinalSection = () => {
         <div className="w-[80%] mx-auto">
           <p className="text-lg lg:text-2xl">Takeaway:</p>
         </div>
-        <p className="text-mainpara w-[80%] mx-auto mt-8">
+        <p className="text-mainpara w-[80%] whitespace-pre-line mx-auto mt-8 text-base font-semibold">
           {projectinfo?.projectFooterinfo?.takeaway}
         </p>
       </div>
@@ -39,5 +49,5 @@ const ProjectFinalSection = () => {
 export default SectionWrapper(
   ProjectFinalSection,
   "projectinfofinal",
-  " w-full lg:w-[95%] mx-auto 2xl:w-[93%] py-5 md:mt-[100px]  xl:mt-[100px]   px-4"
+  " w-full lg:w-[95%] mx-auto 2xl:w-[93%] py-5 md:mt-[90px]  xl:mt-[100px]   px-4"
 );

@@ -16,7 +16,7 @@ const ProjectSection2 = () => {
                     <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px]  lg:h-[566px]'>
                         <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile1}/>
                     </div>
-                    <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px]  lg:h-[566px] div2'>
+                    <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px] shadow-2xl lg:h-[566px] div2'>
                         <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile}/>
                     </div>
                 </div>
@@ -32,16 +32,18 @@ const ProjectSection2 = () => {
                     </div>
                 </div>
             </div>
-            <div className=' h-[80vh] w-full mt-8 lg:mt-0 flex justify-center flex-col relative align-center lg:h-[100vh]' style={{ backgroundImage: "url('/images/projects/projectbg1.png')", backgroundSize: "100% 100%" }}>
+            <div className=' h-[80vh] w-full mt-8 lg:mt-0 flex justify-center flex-col relative align-center lg:h-[100vh]' style={{ backgroundImage: `url('/images/projects/projectbg1.png')`, backgroundSize: "100% 100%" }}>
                 <div className=" mb-16 lg:mb-36">
-                    <p className='text-xl xl:text-3xl  text-center'>Section Title:</p>
-                    <p className='text-mainpara   text-center lg:text-2xl xl:text-3xl text-xl'>Add a Subtitle</p>
+                    <p className='text-xl xl:text-3xl  text-center'>Feature Showcase:</p>
+                    <p className='text-mainpara   text-center lg:text-2xl xl:text-3xl text-xl'>{projectinfo?.projectFeaturessection?.subtitle}</p>
                     <p className='my-3 lg:my-7 w-[80%] lg:w-[65%] m-auto text-sm lg:text-lg text-mainpara  text-center '>
                         {projectinfo?.projectFeaturessection?.desc}
                     </p>
                 </div>
                 <div className='p-2 addsectionmainproblem lg:top-[60%]  top-[70%] lg:h-[450px] xl:h-[500px] h-[300px] lg:rounded-[30px] rounded-[20px] absolute w-[95%] lg:w-4/5'>
-                    <div className=' addsectionmainproblemimage lg:rounded-[30px] rounded-[20px] '></div>
+                    <div className=' addsectionmainproblemimage  lg:rounded-[30px] rounded-[20px] '>
+                        <Image width={200} height={200} alt="awdw"  className='lg:rounded-[30px] rounded-[20px] w-full h-full' unoptimized src={projectinfo?.projectFeaturessection?.featureimg} />
+                    </div>
                 </div>
             </div>
         </div>
