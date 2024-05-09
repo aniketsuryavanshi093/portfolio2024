@@ -19,7 +19,7 @@ const ProjectSection3 = () => {
             backgroundSize: "100% 100%",
           }}
         >
-          <div className=" lg:mb-72 w-[90%] ">
+          <div className=" lg:mb-72 lg:w-[90%] w-[98%] ">
             <p className="lg:text-3xl text-xl text-right">Important Feature:</p>
             <p className="text-mainpara   text-right lg:text-3xl text-xl">
               {projectinfo?.projectredbackgroundsection?.sectiontitle}
@@ -53,7 +53,7 @@ const ProjectSection3 = () => {
           )}
         </div>
       </div>
-      {breakpoint !== "mb" && <div className="h-[50vh]"></div>}
+      {breakpoint !== "mb" && <div className=" h-[30vh] lg:h-[50vh]"></div>}
     </>
   );
 };
