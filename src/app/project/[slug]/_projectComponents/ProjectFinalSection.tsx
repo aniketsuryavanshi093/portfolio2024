@@ -10,7 +10,7 @@ const ProjectFinalSection = () => {
   const projectinfo = projectdetail[`${slug}`];
   return (
     <div className="w-full">
-      <div className="flex justify-center flex-col align-center gap-4 w-[80%] lg:w-[60%] m-auto">
+      <div className="flex justify-center flex-col align-center gap-4 w-[96%] lg:w-[60%] m-auto">
         <p className="lg:text-3xl text-xl text-center">
           {projectinfo?.projectfinalsection?.sectiontitle}
         </p>
@@ -18,12 +18,12 @@ const ProjectFinalSection = () => {
           {projectinfo?.projectfinalsection?.sectiondesc}
         </p>
       </div>
-      <div className="showfinalimage m-auto mt-7 rounded-xl lg:w-[70%] w-[90%] h-[330px] lg:h-[450px]">
+      <div className="showfinalimage m-auto mt-7 rounded-xl lg:w-[70%] w-[90%] lg:h-[450px] h-[230px]">
         <Image
           width={200}
           height={200}
           alt="awdw"
-          className="rounded-xl w-full h-full"
+          className="rounded-xl w-full h-full object-contain lg:object-cover"
           unoptimized
           src={projectinfo?.projectfinalsection?.sectionimage}
         />

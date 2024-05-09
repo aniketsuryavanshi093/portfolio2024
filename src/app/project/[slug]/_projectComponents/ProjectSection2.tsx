@@ -13,12 +13,20 @@ const ProjectSection2 = () => {
         <div className=' '>
             <div className='flex gap-5 lg:gap-0 justify-between flex-col lg:flex-row align-center w-[90%] m-auto '>
                 <div className='w-full lg:w-1/2 flex'>
+                    {
+                        projectinfo?.projectsection2imagetwo ? (
+                            <div className='w-full'>
+                                <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imagetwo}/>
+                            </div>
+                        ) : <>
                     <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px]  lg:h-[566px]'>
                         <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile1}/>
                     </div>
                     <div className='mobileimagedivoverlap w-[240px]  h-[462px] lg:w-[302px] shadow-2xl lg:h-[566px] div2'>
                         <img alt='mobiledemoimage' className='h-full rounded-[20px] w-full'  src={projectinfo?.projectsection2imageMobile}/>
                     </div>
+                        </>
+                    }
                 </div>
                 <div className='w-full lg:w-1/2'>
                     <div className=' w-full lg:w-[80%] m-auto'>

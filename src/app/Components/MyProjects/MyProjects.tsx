@@ -49,7 +49,16 @@ const MyProjects = () => {
       loadImageWithRetry(imageElementstreak, imageUrlstreak, 2, 100);
     }
   }, []);
-
+  const handleGithubredirect = (e: React.MouseEvent, url: string) => {
+    e.stopPropagation();
+    e.preventDefault();
+    window.open(url, "_blank");
+  };
+  const handleRedirect = (e: React.MouseEvent, url: string) => {
+    e.stopPropagation();
+    e.preventDefault();
+    window.open(url, "_blank");
+  };
   return (
     <div className="w-full">
       <motion.p
@@ -64,33 +73,74 @@ const MyProjects = () => {
           prefetch={false}
           className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
         >
+          <div
+            className="absolute w-[30px] shadow-2xl h-[30px] right-4 top-4"
+            onClick={(e) =>
+              handleRedirect(e, "https://task-sphere-fe.vercel.app/")
+            }
+          >
+            <Image
+              alt="scale"
+              className="bg-white"
+              src={"/images/icons/redirect.svg"}
+              width={17}
+              height={17}
+            />
+          </div>
           <Image
-            src="/images/project1.png"
-            className="lg:rounded-[30px] rounded-[10px]"
+            src="/images/projects/tasksphere/taskspheredemo.png"
+            className="lg:rounded-[30px]  rounded-[10px]"
             unoptimized
             width={100}
             height={250}
             alt="project1"
           />
-          <div className="lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center">
-            <Image
-              alt="scale"
-              unoptimized
-              width={30}
-              height={30}
-              className="w-[30px] scaleimage"
-              src={"/images/scale.png"}
-            />
-            <div className="flex flex-col align-start justify-center">
-              <p
-                className=" 
+          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+            <div className="w-full m-auto flex justify-start my-3 gap-4 align-center">
+              <Image
+                alt="scale"
+                unoptimized
+                width={30}
+                height={30}
+                className="w-[30px] scaleimage"
+                src={"/images/projects/tasksphere/logo.webp"}
+              />
+              <div className="flex flex-col align-start justify-center">
+                <p
+                  className=" 
                             lg:text-lg text-sm"
-              >
-                TaskSphere (twilio)
-              </p>
-              <p className="lg:text-base  xl:text-lg text-sm text-mainpara">
-                My Design Projects
-              </p>
+                >
+                  TaskSphere (twilio)
+                </p>
+                <p className="lg:text-base  xl:text-lg text-sm text-mainpara">
+                  My Design Projects
+                </p>
+              </div>
+            </div>
+            <div>
+              <i
+                onClick={(e) =>
+                  handleGithubredirect(
+                    e,
+                    "https://github.com/aniketsuryavanshi093/TaskSphere-FE"
+                  )
+                }
+                className="fa-brands w-[20%] cursor-pointer hover:border-mainpara text-3xl fa-github"
+              ></i>
+            </div>
+            <div
+              className=" w-[30px] shadow-2xl h-[30px]  "
+              onClick={(e) =>
+                handleRedirect(e, "https://task-sphere-fe.vercel.app/")
+              }
+            >
+              <Image
+                alt="scale"
+                className="!w-[25px] !h-[25px] mt-[5px]"
+                src={"/images/icons/redirectwhite.svg"}
+                width={17}
+                height={17}
+              />
             </div>
           </div>
         </Link>
@@ -99,44 +149,20 @@ const MyProjects = () => {
           prefetch={false}
           className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
         >
-          <Image
-            src="/images/project2.png"
-            className="lg:rounded-[30px] rounded-[10px]"
-            unoptimized
-            width={100}
-            height={250}
-            alt="project1"
-          />
-          <div className="lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center">
+          <div
+            className="absolute w-[30px] shadow-2xl h-[30px] right-4 top-4"
+            onClick={(e) =>
+              handleRedirect(e, "https://task-sphere-fe.vercel.app/")
+            }
+          >
             <Image
               alt="scale"
-              unoptimized
-              width={30}
-              height={30}
-              className="w-[30px] scaleimage"
-              src={"/images/scale.png"}
+              src={"/images/icons/redirect.svg"}
+              width={17}
+              className="bg-white"
+              height={17}
             />
-            <div className="flex flex-col align-start justify-center">
-              <p
-                className=" 
-                           lg:text-lg text-sm"
-              >
-                FreelanceWeb (Upwork)
-              </p>
-              <p
-                className=" 
-                             lg:text-base  xl:text-lg text-sm text-mainpara"
-              >
-                My Design Projects
-              </p>
-            </div>
           </div>
-        </Link>
-        <Link
-          href={"project/schema"}
-          prefetch={false}
-          className="projectcard  m-auto lg:rounded-[30px] rounded-[10px] p-1 mt-8 w-5/12"
-        >
           <Image
             src="/images/projects/demoimage.png"
             className="lg:rounded-[30px]  rounded-[10px]"
@@ -145,28 +171,134 @@ const MyProjects = () => {
             height={250}
             alt="project1"
           />
-          <div className="lg:w-[80%] w-full m-auto flex justify-start my-3 gap-4 align-center">
+          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+            <div className=" w-full m-auto flex justify-start my-3 gap-4 align-center">
+              <Image
+                alt="scale"
+                unoptimized
+                width={30}
+                height={30}
+                className="w-[30px] scaleimage"
+                src={"/images/scale.png"}
+              />
+              <div className="flex flex-col align-start justify-center">
+                <p
+                  className=" 
+                           lg:text-lg text-sm"
+                >
+                  FreelanceWeb (Upwork)
+                </p>
+                <p
+                  className=" 
+                             lg:text-base  xl:text-lg text-sm text-mainpara"
+                >
+                  My Design Projects
+                </p>
+              </div>
+            </div>
+            <div>
+              <i
+                onClick={(e) =>
+                  handleGithubredirect(
+                    e,
+                    "https://github.com/aniketsuryavanshi093/freelanceweb"
+                  )
+                }
+                className="fa-brands w-[20%] cursor-pointer hover:border-mainpara text-3xl fa-github"
+              ></i>
+            </div>
+            <div
+              className=" w-[30px] shadow-2xl h-[30px]  "
+              onClick={(e) =>
+                handleRedirect(e, "https://task-sphere-fe.vercel.app/")
+              }
+            >
+              <Image
+                alt="scale"
+                className="!w-[25px] !h-[25px] mt-[5px]"
+                src={"/images/icons/redirectwhite.svg"}
+                width={17}
+                height={17}
+              />
+            </div>
+          </div>
+        </Link>
+        <Link
+          href={"project/schema"}
+          prefetch={false}
+          className="projectcard  m-auto lg:rounded-[30px] rounded-[10px] p-1 mt-8 w-5/12"
+        >
+          <div
+            className="absolute shadow-2xl w-[30px] h-[30px] right-4 top-4"
+            onClick={(e) =>
+              handleRedirect(e, "https://schemadesigner.vercel.app/")
+            }
+          >
             <Image
               alt="scale"
-              unoptimized
-              width={30}
-              height={30}
-              className="w-[30px] scaleimage"
-              src={"/images/scale.png"}
+              src={"/images/icons/redirect.svg"}
+              width={17}
+              className="bg-white"
+              height={17}
             />
-            <div className="flex flex-col align-start justify-center">
-              <p
-                className=" 
+          </div>
+          <Image
+            src="/images/projects/demoimage.png"
+            className="lg:rounded-[30px]  rounded-[10px]"
+            unoptimized
+            width={100}
+            height={250}
+            alt="project1"
+          />
+          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+            <div className=" w-full m-auto flex justify-start my-3 gap-4 align-center">
+              <Image
+                alt="scale"
+                unoptimized
+                width={30}
+                height={30}
+                className="w-[30px] scaleimage"
+                src={"/images/projects/schema/schema.svg"}
+              />
+              <div className="flex flex-col align-start justify-center">
+                <p
+                  className=" 
                            lg:text-lg text-sm"
-              >
-                Schema Designer
-              </p>
-              <p
-                className=" 
+                >
+                  Schema Designer
+                </p>
+                <p
+                  className=" 
                              lg:text-base  xl:text-lg text-sm text-mainpara"
-              >
-                My Design Projects
-              </p>
+                >
+                  My Design Projects
+                </p>
+              </div>
+            </div>
+            <div>
+              <i
+                onClick={(e) =>
+                  handleGithubredirect(
+                    e,
+                    "https://github.com/aniketsuryavanshi093/schemadesigner"
+                  )
+                }
+                className="fa-brands w-[20%] cursor-pointer hover:border-mainpara text-3xl fa-github"
+              ></i>
+            </div>
+            <div
+              className="grid place-content-center w-[30px] shadow-2xl h-[30px] "
+              onClick={(e) =>
+                handleRedirect(e, "https://schemadesigner.vercel.app/")
+              }
+            >
+              <Image
+                alt="scale"
+                className="!w-[25px] !h-[25px] mt-[5px]"
+                src={"/images/icons/redirectwhite.svg"}
+                width={17}
+                height={17}
+              />
             </div>
           </div>
         </Link>
