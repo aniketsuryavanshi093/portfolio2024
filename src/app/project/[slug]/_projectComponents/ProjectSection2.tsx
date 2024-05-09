@@ -48,7 +48,7 @@ const ProjectSection2 = () => {
                         {projectinfo?.projectFeaturessection?.desc}
                     </p>
                 </div>
-                <div className='p-2 addsectionmainproblem lg:top-[60%]  top-[70%] lg:h-[450px] xl:h-[500px] h-[300px] lg:rounded-[30px] rounded-[20px] absolute w-[95%] lg:w-4/5'>
+                <div className='p-2 addsectionmainproblem lg:top-[60%] top-[70%] lg:rounded-[30px] rounded-[20px] absolute w-[95%] lg:w-4/5'>
                     <div className=' addsectionmainproblemimage  lg:rounded-[30px] rounded-[20px] '>
                         <Image width={200} height={200} alt="awdw"  className='lg:rounded-[30px] rounded-[20px] w-full h-full' unoptimized src={projectinfo?.projectFeaturessection?.featureimg} />
                     </div>

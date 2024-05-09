@@ -38,7 +38,7 @@ const ProjectTopInfo = () => {
           />
         </motion.div>
       </div>
-      <div className="w-full grid place-content-center fullimage2 lg:rounded-[40px] lg:w-[80%] rounded-[12px]  p-1 lg:p-2">
+      <div className="w-full  fullimage2 lg:rounded-[40px] lg:w-[80%] rounded-[12px]  p-1 lg:p-2">
         <Image
           src={projectinfo?.projectsection2image}
           width={100}
