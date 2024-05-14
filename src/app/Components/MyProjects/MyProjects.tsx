@@ -71,7 +71,7 @@ const MyProjects = () => {
         <Link
           href={"project/tasksphere"}
           prefetch={false}
-          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
+          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-full lg:w-5/12"
         >
           <div
             className="absolute w-[30px] shadow-2xl h-[30px] right-4 top-4"
@@ -95,7 +95,7 @@ const MyProjects = () => {
             height={250}
             alt="project1"
           />
-          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+          <div className="flex justify-start w-[95%] lg:w-[85%] m-auto gap-4 items-center">
             <div className="w-full m-auto flex justify-start my-3 gap-4 align-center">
               <Image
                 alt="scale"
@@ -147,7 +147,7 @@ const MyProjects = () => {
         <Link
           href={"project/upwork"}
           prefetch={false}
-          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-5/12"
+          className="projectcard lg:rounded-[30px] rounded-[10px] p-1 w-full lg:w-5/12"
         >
           <div
             className="absolute w-[30px] shadow-2xl h-[30px] right-4 top-4"
@@ -171,7 +171,7 @@ const MyProjects = () => {
             height={250}
             alt="project1"
           />
-          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+          <div className="flex justify-start w-[95%] lg:w-[85%] m-auto gap-4 items-center">
             <div className=" w-full m-auto flex justify-start my-3 gap-4 align-center">
               <Image
                 alt="scale"
@@ -226,7 +226,7 @@ const MyProjects = () => {
         <Link
           href={"project/schema"}
           prefetch={false}
-          className="projectcard  m-auto lg:rounded-[30px] rounded-[10px] p-1 mt-8 w-5/12"
+          className="projectcard  m-auto lg:rounded-[30px] rounded-[10px] p-1 mt-0 lg:mt-8 w-full lg:w-5/12"
         >
           <div
             className="absolute shadow-2xl w-[30px] h-[30px] right-4 top-4"
@@ -250,7 +250,7 @@ const MyProjects = () => {
             height={250}
             alt="project1"
           />
-          <div className="flex justify-start lg:w-[85%] m-auto gap-4 items-center">
+          <div className="flex justify-start  w-[95%] lg:w-[85%] m-auto gap-4 items-center">
             <div className=" w-full m-auto flex justify-start my-3 gap-4 align-center">
               <Image
                 alt="scale"
