@@ -9,11 +9,14 @@ import SectionWrapper from '@/app/hoc/StaggerContainer'
 import { fadeIn, textVariant, zoomIn } from '@/app/utils'
 import Typewriter from 'typewriter-effect';
 import { useIsBreakpointActive } from '@/app/hooks/useTailwindBreakpoint'
+import { ReactJSModals } from '../3DviewerLayout/ReactJSModal'
+import { TSModals } from '../3DviewerLayout/TSModal'
+import { JSModals } from '../3DviewerLayout/JSModal'
+import { MongoModal } from '../3DviewerLayout/MOngoModal'
 
 const MySelf = () => {
     const breakpoint = useIsBreakpointActive()
     console.log(breakpoint);
-
     return (
         <>
             <motion.div variants={textVariant()} className='flex flex-col gap-3 lg:gap-6 lg:w-2/5 w-full lg:items-start items-center  z-[9]  justify-start'>
@@ -49,6 +52,10 @@ const MySelf = () => {
                     create efficient, scalable, and user-friendly solutions that solve
                     real-world problems. Let's work together to bring your ideas to life!
                 </p>
+                <JSModals />
+                <ReactJSModals />
+                <TSModals />
+                <MongoModal />
             </motion.div>
             <motion.div variants={zoomIn(.5 * 1, 1.5)} className="_container flex justify-center align-center lg:w-2/5 w-full relative">
                 <motion.div variants={fadeIn("right", "spring", .5 * 2, 1.7)} className={` 2xl:left-[-7%] lg:left-[-15%]  ${breakpoint === "mb" && 'top-[-44%] left-[63%]'}  absolute`}>
@@ -67,6 +74,7 @@ const MySelf = () => {
                     <ParticleImg color="transparent" src={"/images/icons/ts.png"} />
                 </motion.div>
                 <Image width={100} height={100} unoptimized className="profile-pic lg:w-[200px] lg:h-[200px] w-[160px] h-[160px] 2xl:w-[250px] 2xl:h-[250px] shape" src="/images/myprofile.jpg" alt="Profile Picture" />
+
             </motion.div>
         </>
     )
